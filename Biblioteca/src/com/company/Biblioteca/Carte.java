@@ -9,9 +9,9 @@ public class Carte {
     protected String subiect;
     protected String editura;
     protected String limba;
-    protected int nr_pagini;
+    protected int nrPagini;
 
-    public Carte (String isbn, String titlu,Autor autor, Sectiune sectiune, String subiect, String editura, String limba, int nr_pagini){
+    public Carte (String isbn, String titlu,Autor autor, Sectiune sectiune, String subiect, String editura, String limba, int nrPagini){
         this.isbn=isbn;
         this.titlu=titlu;
         this.autor=autor;
@@ -21,23 +21,82 @@ public class Carte {
     }
 
 
-}
+    public String getIsbn() {
+        return isbn;
+    }
 
-class Exemplar extends Carte{
-    protected int id_exemplar;
-    protected Date data_imprumut;
-    protected Date data_returnare;
-    protected int pret;
-    protected StatusExemplar status;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
+    public String getTitlu() {
+        return titlu;
+    }
 
-    public Exemplar(String isbn, String titlu, Autor autor, Sectiune sectiune, String subiect, String editura, String limba, int nr_pagini,
-    int id_exemplar, Date data_imprumut, Date data_returnare, int pret, StatusExemplar status) {
-        super(isbn, titlu, autor, sectiune, subiect, editura, limba, nr_pagini);
-        this.id_exemplar=id_exemplar;
-        this.data_imprumut=data_imprumut;
-        this.data_returnare=data_returnare;
-        this.pret=pret;
-        this.status=status;
+    public void setTitlu(String titlu) {
+        this.titlu = titlu;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public Sectiune getSectiune() {
+        return sectiune;
+    }
+
+    public void setSectiune(Sectiune sectiune) {
+        this.sectiune = sectiune;
+    }
+
+    public String getSubiect() {
+        return subiect;
+    }
+
+    public void setSubiect(String subiect) {
+        this.subiect = subiect;
+    }
+
+    public String getEditura() {
+        return editura;
+    }
+
+    public void setEditura(String editura) {
+        this.editura = editura;
+    }
+
+    public String getLimba() {
+        return limba;
+    }
+
+    public void setLimba(String limba) {
+        this.limba = limba;
+    }
+
+    public int getnrPagini() {
+        return nrPagini;
+    }
+
+    public void setnrPagini(int nrPagini) {
+        this.nrPagini = nrPagini;
+    }
+
+    @Override
+    public String toString() {
+        return "Carte{" +
+                "isbn='" + isbn + '\'' +
+                ", titlu='" + titlu + '\'' +
+                ", autor=" + autor +
+                ", sectiune=" + sectiune +
+                ", subiect='" + subiect + '\'' +
+                ", editura='" + editura + '\'' +
+                ", limba='" + limba + '\'' +
+                ", nrPagini=" + nrPagini +
+                '}';
     }
 }
+
