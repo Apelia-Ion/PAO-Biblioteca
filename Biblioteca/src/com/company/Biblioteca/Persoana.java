@@ -25,4 +25,30 @@ public class Persoana {
     public String getTelefon(){
         return telefon;
     }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public void setAdresa(Adresa adresa) {
+        this.adresa = adresa;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTelefon(String telefon) {
+        this.telefon = telefon;
+    }
+
+    @Override
+    public String toString() {
+        return "Persoana{" +
+                "nume='" + nume + '\'' +
+                ", adresa=" + adresa +
+                ", email='" + email + '\'' +
+                ", telefon='" + telefon + '\'' +
+                '}';
+    }
 }

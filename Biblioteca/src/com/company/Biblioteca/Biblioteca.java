@@ -4,22 +4,22 @@ import java.util.ArrayList;
 public class Biblioteca {
     final String nume="Biblioteca Proiect";
     private static Adresa adresa = new Adresa("Bd Unirii","Bucuresti","Bucuresti","032453","Romania");
-    private static Biblioteca single_instance = null;
+    private static Biblioteca singleInstance = null;
 
     public static Biblioteca getInstance()
     {
-        if (single_instance == null)
-            single_instance = new Biblioteca(adresa);
+        if (singleInstance == null)
+            singleInstance = new Biblioteca(adresa);
 
-        return single_instance;
+        return singleInstance;
     }
 
-    ArrayList<Carte> listaCarti = new ArrayList<Carte>();
-    ArrayList<Exemplar> listaExemplare = new ArrayList<Exemplar>();
-    ArrayList<Abonat> listaAbonati = new ArrayList<Abonat>();
-    ArrayList<Administrator> listaAdministratori = new ArrayList<Administrator>();
-   public static ArrayList<Sectiune> listaSectiuni = new ArrayList<Sectiune>();
-    ArrayList<Autor> listaAutori = new ArrayList<Autor>();
+    public static ArrayList<Carte> listaCarti = new ArrayList<>();
+    public static ArrayList<Exemplar> listaExemplare = new ArrayList<>();
+    public static ArrayList<Abonat> listaAbonati = new ArrayList<>();
+    public static ArrayList<Administrator> listaAdministratori = new ArrayList<>();
+    public static ArrayList<Sectiune> listaSectiuni = new ArrayList<>();
+    public static ArrayList<Autor> listaAutori = new ArrayList<>();
 
 
     private Biblioteca(Adresa adresa){
